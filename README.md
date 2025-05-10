@@ -14,7 +14,7 @@ float get_number(void* rcx)
 
 void init()
 {
-	get_fov.hook(reinterpret_cast<void*>(0x5C7AB0),&get_number); // 0x5C7AB0 - Function Address
-  get_fov.virtual_hook(reinterpret_cast<void*>(0x5C7AB0),12,&get_number); // 12 - Function Index
+    get_fov.hook(reinterpret_cast<void*>(0x5C7AB0),&get_number); // 0x5C7AB0 - Function Address
+    get_fov.virtual_hook(reinterpret_cast<void*>(0x5C7AB0),12,&get_number); // 12 - Function Index
 }
 ```
