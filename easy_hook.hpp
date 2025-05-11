@@ -51,7 +51,7 @@ public:
 	}
 
 	template<typename ReturnType,typename ConventionTag = noconv_tag_t,typename... Args,typename = std::enable_if_t<std::is_base_of<conv_tag_t,ConventionTag>::value>>
-	ReturnType call(Args... args) noexcept
+	ReturnType call(Args&&... args) noexcept
 	{
 		using fnType = typename func_call_helper_t<ReturnType, ConventionTag, Args...>::type;
 
